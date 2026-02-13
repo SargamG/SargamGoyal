@@ -87,3 +87,24 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
   });
 });
+
+/* ===============================
+   MOBILE MENU TOGGLE
+================================= */
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("open");
+    navLinks.classList.toggle("open");
+  });
+}
+
+/* Close menu after clicking a link */
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.classList.remove("open");
+  });
+});
