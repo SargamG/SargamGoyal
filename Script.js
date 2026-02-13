@@ -79,6 +79,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       offset = 10;   // smaller offset = scroll less down
     } else if (target.id === "projects") {
       offset = -110;
+    } else if (target.id === "about") {
+      offset = -110;
     }
 
     window.scrollTo({
